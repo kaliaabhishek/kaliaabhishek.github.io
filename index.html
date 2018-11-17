@@ -11,6 +11,7 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+		<script src="https://unpkg.com/feather-icons"></script>
 	</head>
 	<body>
 		<div class="home-grid">
@@ -23,13 +24,41 @@
 				</h2>
 				<nav>
 					<div class="nav-item-dev">
-						<p><a href="http://google.com">development</a></p>
+						<p>
+							<a href="/new.html"
+								><i data-feather="code" class="nav-icon"></i
+								><br />development</a
+							>
+						</p>
 					</div>
-					<div class="nav-item-des"><p>design</p></div>
-					<div class="nav-item-hir"><p>hire me</p></div>
-					<div class="nav-item-con"><p>contact</p></div>
+					<div class="nav-item-des">
+						<p>
+							<a href="http://google.com"
+								><i data-feather="image" class="nav-icon"></i><br />design</a
+							>
+						</p>
+					</div>
+					<div class="nav-item-hir">
+						<p>
+							<a href="http://google.com"
+								><i data-feather="briefcase" class="nav-icon"></i><br />hire
+								me</a
+							>
+						</p>
+					</div>
+					<div class="nav-item-con">
+						<p>
+							<a href="http://google.com"
+								><i data-feather="phone-call" class="nav-icon"></i><br />contact
+								me</a
+							>
+						</p>
+					</div>
 				</nav>
 			</div>
 		</div>
+		<script>
+			feather.replace();
+		</script>
 	</body>
 </html>
