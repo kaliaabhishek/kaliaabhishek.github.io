@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:400,600,700");
+
+html {
+  --black: #353535;
+  --blue: #00b0ff;
+  --pink: #ff0083;
+  --orange: #ff8c00;
+  --gray: #afafaf;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: var(--black);
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-grid {
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 20px;
+}
+
+.home-content {
+  grid-column-start: 2;
+  grid-column-end: -2;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.my-image {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  border-radius: 5px;
+}
+
+span#role {
+  color: var(--blue);
+}
+
+span#adjective {
+  color: var(--orange);
+}
+
+span#stuff {
+  color: var(--pink);
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gray);
+  transition: all 2ms ease;
+}
+
+nav * {
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+nav .nav-item-dev:hover {
+  color: var(--blue);
+  font-weight: 800;
+}
+nav .nav-item-des:hover {
+  color: var(--pink);
+  font-weight: 800;
+}
+nav .nav-item-hir:hover {
+  color: var(--orange);
+  font-weight: 800;
+}
+nav .nav-item-con:hover {
+  color: var(--black);
+  font-weight: 800;
+}
