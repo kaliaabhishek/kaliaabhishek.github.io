@@ -90,6 +90,9 @@ nav a {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    padding-top: 20px;
+  }
   nav {
     display: grid;
     grid-template-columns: 200px;
