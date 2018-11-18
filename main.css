@@ -94,6 +94,15 @@ nav a {
     display: grid;
     grid-template-columns: 200px;
   }
+
+  .home-content {
+    grid-row-start: 2;
+  }
+
+  .my-image {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
