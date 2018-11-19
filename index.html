@@ -12,18 +12,32 @@
 		/>
 		<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 	</head>
 	<body>
 		<div class="home-grid">
 			<img src="images/0.jpeg" alt="My photo" class="my-image" width="100px" />
 			<div class="home-content">
 				<h1>Hi! I'm Abhishek</h1>
-				<div class="desc">
-					<h2>A</h2>
-					<h2 class="role">full stack developer</h2>
-					<h2>working on</h2>
-					<h2 class="adjective">scalable</h2>
-					<h2 class="stuff">UIs</h2>
+				<div class="roles">
+					<h2>
+						<span class="line"
+							>A <span id="role">software engineer</span> working on building
+							<span id="work">sclabale apps</span></span
+						>
+						<span class="line"
+							>A <span id="role">UI designer</span> striving for
+							<span id="work">effective user experiences</span></span
+						>
+						<span class="line"
+							>An <span id="role">entrepreneur</span> trying to create the
+							<span id="work">future of marketing</span></span
+						>
+						<span class="line"
+							>A <span id="role">blogger</span> writing about
+							<span id="work">web tech</span></span
+						>
+					</h2>
 				</div>
 				<nav>
 					<div class="nav-item-dev">
@@ -62,6 +76,46 @@
 		</div>
 		<script>
 			feather.replace();
+			var line = document.getElementsByClassName("line");
+
+			var tl = new TimelineLite({
+				onComplete: function() {
+					tl.restart();
+				}
+			});
+
+			TweenLite.defaultEase = Circ.easeInOut;
+
+			var time = 0.9;
+			var y = 100;
+
+			tl.add(
+				TweenMax.staggerFromTo(
+					line,
+					time,
+					{
+						opacity: 0,
+						y: y
+					},
+					{
+						opacity: 1,
+						y: 0
+					},
+					2
+				)
+			).add(
+				TweenMax.staggerTo(
+					line,
+					time,
+					{
+						delay: time,
+						opacity: 0,
+						y: -y
+					},
+					2
+				),
+				1.3
+			);
 		</script>
 	</body>
 </html>
