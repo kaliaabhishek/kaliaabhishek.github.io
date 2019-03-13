@@ -131,6 +131,20 @@ span#work {
   }
 }
 
+.portfolio-image {
+  border: 2px solid;
+}
+
+.portfolio {
+  padding: 50px;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  background: #00b0ff;
+  border-radius: 4px;
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 }
